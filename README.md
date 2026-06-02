@@ -1,22 +1,26 @@
 # Inventory & Order Management System
 
-## Overview
+A full-stack Inventory & Order Management System built using React, FastAPI, PostgreSQL, and Docker. The application enables businesses to efficiently manage products, customers, orders, and inventory through a modern web interface.
 
-A full-stack Inventory & Order Management System built with:
+---
 
-* React
-* FastAPI
-* PostgreSQL
-* Docker
-* Docker Compose
+## Live Demo
 
-The application allows businesses to:
+### Frontend
 
-* Manage products
-* Manage customers
-* Create and track orders
-* Monitor inventory levels
-* View dashboard statistics
+https://inventory-management-system-gold-six.vercel.app
+
+### Backend API
+
+https://inventory-management-system-ltki.onrender.com
+
+### API Documentation
+
+https://inventory-management-system-ltki.onrender.com/docs
+
+### Docker Image
+
+https://hub.docker.com/r/himanshurai3721/inventory-backend
 
 ---
 
@@ -25,16 +29,16 @@ The application allows businesses to:
 ### Product Management
 
 * Create products
-* View products
 * Update products
 * Delete products
+* View product inventory
 * Unique SKU validation
 
 ### Customer Management
 
 * Create customers
-* View customers
 * Delete customers
+* View customer information
 * Unique email validation
 
 ### Order Management
@@ -42,76 +46,141 @@ The application allows businesses to:
 * Create orders
 * View orders
 * View order details
-* Inventory deduction on order creation
-* Stock validation
+* Automatic inventory deduction
+* Stock availability validation
 
 ### Dashboard
 
-* Total products
-* Total customers
-* Total orders
-* Low stock products
+* Total Products
+* Total Customers
+* Total Orders
+* Low Stock Product Monitoring
 
 ---
 
-## Tech Stack
+## Business Rules Implemented
+
+### Product Rules
+
+* Product SKU must be unique.
+
+### Customer Rules
+
+* Customer email must be unique.
+
+### Order Rules
+
+* Orders cannot be created if stock is insufficient.
+* Product inventory is automatically reduced when an order is placed.
+
+---
+
+## Technology Stack
 
 ### Frontend
 
 * React
 * Vite
+* Axios
+* Bootstrap
 
 ### Backend
 
 * FastAPI
 * SQLAlchemy
 * Pydantic
+* Uvicorn
 
 ### Database
 
 * PostgreSQL
 
-### DevOps
+### DevOps & Deployment
 
 * Docker
 * Docker Compose
+* Render
+* Vercel
+* Docker Hub
+
+---
+
+## Project Architecture
+
+Frontend (React + Vite)
+↓
+Backend API (FastAPI)
+↓
+PostgreSQL Database
 
 ---
 
 ## Running Locally
 
-### Start the application
+### Clone Repository
 
+```bash
+git clone https://github.com/Himanshurai3721/inventory-management-system.git
+cd inventory-management-system
+```
+
+### Start Application
+
+```bash
 docker compose up --build
+```
 
-### Frontend
+### Application URLs
 
+Frontend:
 http://localhost:5173
 
-### Backend API
-
+Backend API:
 http://localhost:8000
 
-### Swagger Documentation
-
+Swagger API Docs:
 http://localhost:8000/docs
 
 ---
 
 ## Environment Variables
 
-POSTGRES_USER
+### Backend
 
-POSTGRES_PASSWORD
-
-POSTGRES_DB
-
-DATABASE_URL
+```env
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+DATABASE_URL=
+```
 
 ---
 
 ## Deployment
 
-Frontend: Vercel
+| Service             | Platform          |
+| ------------------- | ----------------- |
+| Frontend            | Vercel            |
+| Backend API         | Render            |
+| PostgreSQL Database | Render PostgreSQL |
+| Docker Image        | Docker Hub        |
 
-Backend: Render
+---
+
+## Repository
+
+GitHub:
+https://github.com/Himanshurai3721/inventory-management-system
+
+Docker Hub:
+https://hub.docker.com/r/himanshurai3721/inventory-backend
+
+---
+
+
+
+Himanshu Kumar Rai
+
+B.Tech Computer Science Engineering
+
+Full Stack Development | Software Engineering | AI & Data
